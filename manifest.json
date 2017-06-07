@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "url-block",
+  "description": "Whitelist websites with regex",
+  "version": "1.0",
+    "background": {
+    "persistent": false,
+    "scripts": [
+      "urlblock.js"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "tabs"
+  ],
+  "options_page": "options.html"
+}
