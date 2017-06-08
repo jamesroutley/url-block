@@ -24,7 +24,9 @@ const loadPatterns = () => {
     _removeListItems(patternList);
     patterns.forEach((pattern) => {
       const li = document.createElement('li');
-      li.appendChild(document.createTextNode(pattern));
+      const code = document.createElement('code');
+      code.innerHTML = pattern;
+      li.appendChild(code);
       patternList.appendChild(li);
     });
   })

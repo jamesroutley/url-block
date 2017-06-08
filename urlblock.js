@@ -11,7 +11,7 @@ const block = (data) => {
 			const blockedPageURL = chrome.extension.getURL('block.html')
 			const tabId = data.tabId;
 			console.debug(`Blocking ${url}`);
-			chrome.tabs.update(tabId, {url: blockedPageURL});
+			chrome.tabs.update(tabId, {url: `${blockedPageURL}#${url}`});
 		} else {
 			console.debug(`URL allowed: ${url}`)
 		}
